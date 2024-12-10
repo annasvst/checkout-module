@@ -34,6 +34,7 @@ function togglePricing() {
 
     if (isYearly) {
       priceDisplay.innerText = `$${plan.yearlyPrice}/yr`;
+      // It's always better to toggle styles instead of modifying styles directly like this through style property. Style property is used to get the inline styles of an element.
       discountMessage.style.display = "block";
     } else {
       priceDisplay.innerText = `$${plan.monthlyPrice}/mo`;
@@ -119,6 +120,7 @@ function updateSummary() {
 //step 1da error için
 function validateStep1() {
   let isValid = true;
+  // It would be good to add more precise input validation and modify error messages from JS (using textContext property for example) accordingly. We did something similar in the form validation example in the lesson.
 
   const nameInput = document.getElementById("name");
   const emailInput = document.getElementById("email");

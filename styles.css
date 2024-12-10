@@ -1,9 +1,10 @@
 * {
+  /* Avoid resetting margin and padding and adding font-family or other styles in this selector. * selector applies styles to each elements one by one which is not very efficient. */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* Apply font-family to the html or body select instead. */
   font-family: "Ubuntu";
-
 }
 
 :root {
@@ -35,7 +36,9 @@ p {
 
 .form__p {
   color: var(--cool-gray);
+  /* Don't set height or width of text elements. You can apply width and height to parent containers but if you need to add space around text as you do here, use margin / padding for that instead. */
   min-height: 50px;
+  /* form__p is not a flex container so align-content is not applicable here. In fact, you don't even need it. */
   align-content: center;
 }
 
@@ -75,6 +78,7 @@ p {
 
 /* Sidebar styling */
 .sidebar {
+  /* When using images/files, make sure that name is short and clear and does not have any additional characters like slaches, speaces, etc. */
   background-image: url(bg-sidebar-desktop\ \(1\).svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -85,13 +89,13 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /*height: 92vh;*/
   margin: 15px;
   border-radius: 15px;
 }
 
 .sidebar__ul {
   list-style-type: none;
+  /* Instead of adding min-width here, make sure that elements inside every list item has space around them. E.g. since you used grid for the li, you can add gap to adjust space between step number the step description. */
   min-width: 170px;
 }
 
@@ -140,24 +144,25 @@ p {
 /* Form container */
 .form__container {
   flex-grow: 1;
-  padding: 40px 100px 0 100px;
+  /* Padding on the bottom is also needed. */
+  padding: 40px 100px 20px 100px;
   border-radius: 10px;
   background-color: var(--white);
   /* Add some margin for better look */
-  height: 100%;
-  width: 100%;
+  /* Height and width should not be needed since you use felx-grow:1 above */
+  /* height: 100%;
+  width: 100%; */
   min-height: 500px;
 
 }
 
-/* Form elements */
+/* Remove, there's no form class in HTML */
 .form {
   display: flex;
   flex-direction: column;
   width: 100%;
   min-height: 330px;
   min-width: 300px;
-
 }
 
 
