@@ -60,6 +60,7 @@
 
                         <h2 class="form__h2">Select your plan</h2>
                         <p class="form__p">You have the option of monthly and yearly billing.</p>
+                        <div class="error-message" id="planError">Please select a plan to continue.</div>
                         <div class="form__step-2--plan-container">
                             <div class="form__step-2--plan" id="arcade" data-plan="arcade">
                                 <label for="plan-arcade" class="form__step-2--label">
@@ -107,7 +108,7 @@
                         </div>
                     </div>
                     <div class="submit__buttons">
-                        <button class="submit__buttons--next" id="nextStep2" onclick="goToStep(3)" type="button">Next
+                        <button class="submit__buttons--next" id="nextStep2" onclick="validateStep2()" type="button">Next
                             Step</button>
                         <button class="submit__buttons--prev" onclick="goToStep(1)" type="button">Go Back</button>
                     </div>
