@@ -116,7 +116,19 @@ function updateSummary() {
   }`;
 }
 
-//step 1da error için
+function validateStep2() {
+  const selectedPlanInput = document.querySelector('input[name="plan"]:checked');
+  const planError = document.getElementById("planError");
+
+  if (!selectedPlanInput) {
+    planError.style.display = "block";
+    return false;
+  }
+
+  planError.style.display = "none";
+  goToStep(3);
+}
+
 function validateStep1() {
   let isValid = true;
 

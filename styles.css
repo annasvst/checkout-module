@@ -215,6 +215,12 @@ p {
   border-color: var(--strawberry-red);
 }
 
+#planError {
+  grid-column: auto;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
 /*mobile part*/
 @media (max-width: 375px) {
   .outer-container {
